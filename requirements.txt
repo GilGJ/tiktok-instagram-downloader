@@ -1,1 +1,2 @@
-flask\nyt-dlp
+flask
+yt-dlp
