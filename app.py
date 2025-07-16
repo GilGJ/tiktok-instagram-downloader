@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request, send_file
 from yt_dlp import YoutubeDL
 import os
@@ -29,4 +28,6 @@ def download_video():
         return f"Error al descargar: {e}"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # ✅ Cambios para Render
+    port = int(os.environ.get('PORT', 5000))  # Render asigna dinámicamente el puerto
+    app.run(host='0.0.0.0', port=port, debug=True)
